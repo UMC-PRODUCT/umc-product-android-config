@@ -1,7 +1,6 @@
 name: config 검증
 on:
   pull_request:
-    paths: ["app-config.json", "schema.json"]
   push:
     branches: [main]
 
