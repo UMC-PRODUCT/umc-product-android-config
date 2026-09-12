@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "notices"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "notices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["screen", "enabled", "template", "title", "body"],
+        "additionalProperties": false,
+        "properties": {
+          "screen": { "enum": ["home", "signup_email", "signup_social", "find_password"] },
+          "enabled": { "type": "boolean" },
+          "template": { "enum": ["INFO", "CONFIRM", "BLOCKING"] },
+          "title": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "body": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "until": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}
