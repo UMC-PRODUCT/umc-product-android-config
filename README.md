@@ -42,7 +42,7 @@ GitHub Pages 로 서빙되며 캐시가 10분입니다. **머지 후 최대 10�
   "version": 1,
   "notices": [
     {
-      "screen": "signup_email",
+      "screen": "EmailSignUp",
       "enabled": false,
       "template": "INFO",
       "title": "인증 메일이 안 올 수 있어요",
@@ -64,12 +64,47 @@ GitHub Pages 로 서빙되며 캐시가 10분입니다. **머지 후 최대 10�
 
 ### `screen` 에 쓸 수 있는 값
 
-| 값 | 앱 화면 |
-|---|---|
-| `home` | 홈 |
-| `signup_email` | 이메일 회원가입 |
-| `signup_social` | 소셜 회원가입 |
-| `find_password` | 비밀번호 찾기 |
+앱의 화면 경로 이름(`MainDestination`)을 그대로 씁니다. 대소문자까지 똑같이 적어야 합니다.
+
+| 구분 | 값 | 화면 |
+|---|---|---|
+| 시작·인증 | `Login` | 로그인 (카카오·구글·UMC 계정 선택) |
+| | `EmailLogin` | UMC 계정 로그인 |
+| | `FindPassword` | 비밀번호 찾기 |
+| | `EmailSignUp` | 이메일 회원가입 (이메일 인증) |
+| | `SocialSignUp` | 소셜 회원가입 (이메일 인증) |
+| | `SignUp` | 개인정보 입력 (가입 마지막 단계) |
+| | `Permission` | 권한 안내 |
+| | `SignUpFail` | 챌린저 인증 실패 |
+| | `SignUpFailCode` | 챌린저 코드 입력 |
+| 홈 | `Home` | 홈 |
+| | `Notification` | 알림 |
+| | `ScheduleAdd` | 일정 생성 |
+| | `ScheduleEdit` | 일정 수정 |
+| | `ScheduleDetail` | 일정 상세 |
+| 공지 | `Notice` | 공지 목록 |
+| | `NoticeSearch` | 공지 검색 |
+| | `NoticeDetail` | 공지 상세 |
+| | `NoticeWrite` | 공지 작성·수정 |
+| | `AdminNotice` | 운영진 공지 |
+| 활동 | `Act` | 활동 |
+| | `AdminChallengerDetail` | 챌린저 상세 (운영진) |
+| | `AdminStudyGroupCreate` | 스터디 그룹 생성 (운영진) |
+| | `AdminStudyGroupSchedule` | 스터디 그룹 일정 (운영진) |
+| 커뮤니티 | `Community` | 커뮤니티 |
+| | `CommunitySearch` | 커뮤니티 검색 |
+| | `CommunityCreate` | 글 작성 |
+| | `CommunityEdit` | 글 수정 |
+| | `CommunityChatting` | 스레드 상세 |
+| MY | `Mycard` | 내 명함 |
+| | `Mypage` | 설정 |
+| | `MyProfile` | 프로필 |
+| | `MyContent` | 내가 쓴 글·댓글·스크랩 |
+| | `Qrcode` | 내 QR 코드 |
+| | `ReceivedCard` | 받은 명함 |
+
+- `Splash`(앱 시작 화면)는 금방 지나가는 화면이라 쓸 수 없습니다
+- 공지 상세·스레드 상세처럼 대상이 여러 개인 화면은 **모든 공지·모든 스레드에** 똑같이 뜹니다
 
 ### `template` 에 쓸 수 있는 값
 

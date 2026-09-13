@@ -12,7 +12,7 @@
         "required": ["screen", "enabled", "template", "title", "body"],
         "additionalProperties": false,
         "properties": {
-          "screen": { "enum": ["home", "signup_email", "signup_social", "find_password"] },
+          "screen": { "enum": ["Login", "EmailLogin", "FindPassword", "EmailSignUp", "SocialSignUp", "SignUp", "Permission", "SignUpFail", "SignUpFailCode", "Home", "Notification", "ScheduleAdd", "ScheduleEdit", "ScheduleDetail", "Notice", "NoticeSearch", "NoticeDetail", "NoticeWrite", "AdminNotice", "Act", "AdminChallengerDetail", "AdminStudyGroupCreate", "AdminStudyGroupSchedule", "Community", "CommunitySearch", "CommunityCreate", "CommunityEdit", "CommunityChatting", "Mycard", "Mypage", "MyProfile", "MyContent", "Qrcode", "ReceivedCard"] },
           "enabled": { "type": "boolean" },
           "template": { "enum": ["INFO", "CONFIRM", "BLOCKING"] },
           "title": { "type": "string", "minLength": 1, "maxLength": 40 },
