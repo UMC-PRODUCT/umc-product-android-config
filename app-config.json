@@ -3,7 +3,7 @@
   "version": 1,
   "notices": [
     {
-      "screen": "signup_email",
+      "screen": "EmailSignUp",
       "enabled": false,
       "template": "INFO",
       "title": "인증 메일이 안 올 수 있어요",
